@@ -1,0 +1,225 @@
+/* Reset de márgenes y padding para asegurar una base uniforme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    background-color: #212121;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Títulos principales */
+h1, h2, h3 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Párrafos generales */
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Estilo de los bloques de información (secciones) */
+.section {
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Subtítulos de las secciones */
+h3.section-title {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Estilo para las listas de gamas y ejemplos */
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: #333333;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+ul li:hover {
+    background-color: #444444;
+}
+
+ul li .gama-name {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+ul li .gama-description {
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Sección para ejemplos */
+ul li .gama-examples {
+    font-size: 1rem;
+    color: #cccccc;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Fondo con lineas divisorias */
+ul li:before {
+    content: '\25B6'; /* Triángulo al inicio de cada item */
+    font-weight: bold;
+    color: #ffcc00;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+ul li .gama-title {
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+/* Estilo de las partes de la placa madre */
+.parts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.parts-list .part-item {
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    width: 45%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.parts-list .part-item:hover {
+    transform: scale(1.05);
+}
+
+.parts-list .part-item h4 {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+.parts-list .part-item p {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Botón para acción */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #0d1117;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6b800;
+}
+
+/* Estilo para secciones de tipo de socket */
+.socket-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socket-item {
+    background-color: #333333;
+    padding: 15px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.socket-item:hover {
+    transform: scale(1.05);
+}
+
+.socket-item h4 {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-bottom: 8px;
+}
+
+.socket-item p {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .parts-list .part-item, .socket-item {
+        width: 100%;
+    }
+    .socket-section {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+}
